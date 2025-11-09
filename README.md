@@ -109,17 +109,25 @@ We are now ready for our first byte operations!
 ### Increment 
 Here is the schematic for how to increment a byte using our three heads. The setup block is a list of PUSHes that connect all the heads together in the way we need for this algorithm, which is overwritten each time we do a different algorithm but which allows us to reuse the heads, saving node count.
 
+<img width="594" height="321" alt="image" src="https://github.com/user-attachments/assets/f01bb6be-9fc0-42b5-be20-97588e65d23e" />
+
 ### Decrement
 The decrement algorithm, funnily enough, is the exact same as the increment algorithm but with C0 and C1 swapped.
 
 ### Input
 The input algorithm simply loops through the bits of the byte and flips them if the input is 1, and leaves them otherwise. This _does_ assume that the byte is initially 0, but I didn't originally think of that so never mind...
 
+<img width="609" height="328" alt="image" src="https://github.com/user-attachments/assets/1b84a89f-0460-477d-bfa7-1a1321a68ef9" />
+
 ### Output
 The output algorithm loops through the bits and just connects C0 and C1 to O0 and O1. 
 
+<img width="585" height="341" alt="image" src="https://github.com/user-attachments/assets/508999b4-d93f-4c46-9316-2c26967d638f" />
+
 ### NOR
 The NOR algorithm will loop through the bits as long as they are all 0. If any one of them is 1 then it will exit immediately, indicating that the value of the byte is greater than 0. If we reach the end of byte exit then we know that all of the bits are 0.
+
+<img width="559" height="392" alt="image" src="https://github.com/user-attachments/assets/f52861fa-1280-4253-9560-2d36e402e593" />
 
 ---
 
